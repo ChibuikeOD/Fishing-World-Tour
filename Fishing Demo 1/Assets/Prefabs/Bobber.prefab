@@ -96,6 +96,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aa698643ebbe0f4090ff2d17020b882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 2828743659498135358}
+  floatingBobber: {fileID: 21300000, guid: f19a6ffd58bf2764db111dbba6bbd958, type: 3}
+  nibbleBobber: {fileID: 21300000, guid: 6843eb13d7df3594eb1171243b4813f4, type: 3}
+  biteBobber: {fileID: 21300000, guid: a50e5922ccee83043909018e3be5a1e7, type: 3}
   sunk: 0
   hooking: 0
 --- !u!50 &6070441968250421942

@@ -154,7 +154,9 @@ public class FishAI : MonoBehaviour
         if (bobber.GetComponent<Bobber>().hooking == true)
         {
             //Joint fish to bobber
-            gameObject.GetComponent<SpringJoint2D>().autoConfigureConnectedAnchor = false;
+            gameObject.AddComponent<SpringJoint2D>();
+            gameObject.GetComponent<SpringJoint2D>().autoConfigureDistance = false;
+            gameObject.GetComponent<SpringJoint2D>().distance = 0.5f;
             gameObject.GetComponent<SpringJoint2D>().connectedBody = bobber.GetComponent<Rigidbody2D>();
             //gameObject.GetComponent<SpringJoint2D>().connectedAnchor = bobber.GetComponent<Rigidbody2D>();
 
@@ -165,7 +167,14 @@ public class FishAI : MonoBehaviour
 
     void PullAway()
     {
-        Debug.Log("Pulling Away");
+        if (bobber != null)
+        {
+            
+        }
+        else
+        {
+            state = State.Fleeing;
+        }
     }
 
     void Flee()
@@ -185,13 +194,13 @@ public class FishAI : MonoBehaviour
         if (randomNumber <= biteLikeliness)
         {
             bobber.GetComponent<Bobber>().sunk = true;
-            Debug.Log("Bite");
+            bobber.GetComponent<Bobber>().BiteAnimate();
             state = State.Biting;
         }
         //Merely nibbled
         else
         {
-            Debug.Log("Nibble");
+            bobber.GetComponent<Bobber>().NibbleAnimate();
         }
         waiting = false;
     }

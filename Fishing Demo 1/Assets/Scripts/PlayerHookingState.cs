@@ -20,7 +20,7 @@ public class PlayerHookingState : PlayerBaseState
             if (bobber.GetComponent<Bobber>().sunk == true)
             {
                 bobber.GetComponent<Bobber>().hooking = true;
-                Debug.Log("Enter Reel State");
+                player.SwitchState(player.ReelingState);
             }
             else
             {

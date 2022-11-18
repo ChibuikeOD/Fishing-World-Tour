@@ -9,6 +9,7 @@ public class PlayerStateManager : MonoBehaviour
     public PlayerMovingState MovingState = new PlayerMovingState();
     public PlayerCastingState CastingState = new PlayerCastingState();
     public PlayerHookingState HookingState = new PlayerHookingState();
+    public PlayerReelingState ReelingState = new PlayerReelingState();
 
     public Transform reticleStartPoint;
     public Transform reticleEndPoint;
@@ -17,6 +18,7 @@ public class PlayerStateManager : MonoBehaviour
     public GameObject bobberPrefab;
 
     public GameObject currentBobber;
+    public GameObject reelArrow;
 
 
     // Start is called before the first frame update
