@@ -8,8 +8,8 @@ public class RainbowTrout : FishInfo
     {
         name = "Rainbow Trout";
 
-        fishStrength = 0.85f;
-        chanceToChange = 20.0f;
+        fishStrength = 0.5f;
+        chanceToChange = 30.0f;
 
         journalPage = Resources.Load<Sprite>("Pages/Rainbow Trout");
     }

@@ -8,7 +8,7 @@ public class GiltHeadBream : FishInfo
     {
         name = "Gilt Head Bream";
 
-        fishStrength = 0.75f;
+        fishStrength = 0.65f;
         chanceToChange = 20.0f;
 
         journalPage = Resources.Load<Sprite>("Pages/Gilt-head Bream");

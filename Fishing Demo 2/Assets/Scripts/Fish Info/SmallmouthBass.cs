@@ -8,7 +8,7 @@ public class SmallmouthBass : FishInfo
     {
         name = "Smallmouth Bass";
 
-        fishStrength = 0.75f;
+        fishStrength = 0.50f;
         chanceToChange = 20.0f;
 
         journalPage = Resources.Load<Sprite>("Pages/Smallmouth Bass");

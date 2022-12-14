@@ -8,8 +8,8 @@ public class Walleye : FishInfo
     {
         name = "Walleye";
 
-        fishStrength = 0.7f;
-        chanceToChange = 25.0f;
+        fishStrength = 0.3f;
+        chanceToChange = 50.0f;
 
         journalPage = Resources.Load<Sprite>("Pages/Walleye");
     }

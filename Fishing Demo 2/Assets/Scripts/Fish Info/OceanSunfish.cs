@@ -8,8 +8,8 @@ public class OceanSunfish : FishInfo
     {
         name = "Ocean Sun Fish";
 
-        fishStrength = 0.5f;
-        chanceToChange = 50.0f;
+        fishStrength = 0.25f;
+        chanceToChange = 65.0f;
 
         journalPage = Resources.Load<Sprite>("Pages/Ocean Sunfish");
     }

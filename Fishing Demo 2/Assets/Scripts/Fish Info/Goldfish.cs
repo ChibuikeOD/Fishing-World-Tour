@@ -8,7 +8,7 @@ public class Goldfish : FishInfo
     {
         name = "Goldfish";
 
-        fishStrength = 0.9f;
+        fishStrength = 0.75f;
         chanceToChange = 10.0f;
 
         journalPage = Resources.Load<Sprite>("Pages/goldfish");

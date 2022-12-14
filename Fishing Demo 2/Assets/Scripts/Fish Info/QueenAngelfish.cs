@@ -8,9 +8,9 @@ public class QueenAngelfish : FishInfo
     {
         name = "Queen Angel Fish";
 
-        fishStrength = 0.75f;
-        chanceToChange = 25.0f;
+        fishStrength = 0.50f;
+        chanceToChange = 30.0f;
 
-        journalPage = Resources.Load<Sprite>("Pages/Quuen Angelfish");
+        journalPage = Resources.Load<Sprite>("Pages/Queen Angelfish");
     }
 }

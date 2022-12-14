@@ -5,12 +5,12 @@ using UnityEngine;
 public class PlayerMovingState : PlayerBaseState
 {
 
-    public float movementSpeed = 5f;
+    private float movementSpeed = 5f;
 
-    public float xMin = -10f;
-    public float xMax = 10f;
-    public float yMin = -6f;
-    public float yMax = -2f;
+    private float xMin = -10f;
+    private float xMax = 10f;
+    private float yMin = -6f;
+    private float yMax = -2f;
 
     public override void EnterState(PlayerStateManager player)
     {

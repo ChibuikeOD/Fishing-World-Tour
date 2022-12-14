@@ -8,8 +8,8 @@ public class HunchbackAnglerFish : FishInfo
     {
         name = "Queen Angel Fish";
 
-        fishStrength = 0.75f;
-        chanceToChange = 25.0f;
+        fishStrength = 0.65f;
+        chanceToChange = 30.0f;
 
         journalPage = Resources.Load<Sprite>("Pages/Hunchback Anglerfish");
     }

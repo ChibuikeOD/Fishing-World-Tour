@@ -25,8 +25,8 @@ public class PlayerCastingState : PlayerBaseState
         casting = false;
         goingBack = false;
 
-        startPoint = player.GetComponent<PlayerStateManager>().reticleStartPoint;
-        endPoint = player.GetComponent<PlayerStateManager>().reticleEndPoint;
+        startPoint = player.GetComponent<PlayerStateManager>().getReticleStartPoint();
+        endPoint = player.GetComponent<PlayerStateManager>().getReticleEndPoint();
 
         reticlePrefab = player.GetComponent<PlayerStateManager>().reticlePrefab;
         bobberPrefab = player.GetComponent<PlayerStateManager>().bobberPrefab;

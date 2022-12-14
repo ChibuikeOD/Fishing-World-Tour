@@ -11,8 +11,10 @@ public class PlayerStateManager : MonoBehaviour
     public PlayerHookingState HookingState = new PlayerHookingState();
     public PlayerReelingState ReelingState = new PlayerReelingState();
 
-    public Transform reticleStartPoint;
-    public Transform reticleEndPoint;
+    [SerializeField]
+    private Transform reticleStartPoint;
+    [SerializeField]
+    private Transform reticleEndPoint;
 
     public GameObject reticlePrefab;
     public GameObject bobberPrefab;
@@ -39,5 +41,15 @@ public class PlayerStateManager : MonoBehaviour
     {
         currentState = state;
         state.EnterState(this);
+    }
+
+    public Transform getReticleStartPoint()
+    {
+        return reticleStartPoint;
+    }
+
+    public Transform getReticleEndPoint()
+    {
+        return reticleEndPoint;
     }
 }

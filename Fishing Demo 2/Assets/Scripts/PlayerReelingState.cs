@@ -14,7 +14,7 @@ public class PlayerReelingState : PlayerBaseState
 
     private float chanceToChange = 25.0f; //From 0 (rare) to 100 (frequent)
 
-    public float playerStrength = 60.0f;
+    private float playerStrength = 60.0f;
     private float fishStrength; //From 0 (strong) to 1 (weak)
 
     private float landRadius = 1.0f;
@@ -64,9 +64,12 @@ public class PlayerReelingState : PlayerBaseState
         if (Vector3.Distance(player.transform.position, bobber.transform.position) < landRadius)
         {
             //Update the field journal / wherever the data will be stored
-            
+            bool newFish = GameManager.Instance.hasFishBeenCaught(fishInfo);
 
-            Debug.Log(fishInfo);
+            if (newFish == false)
+            {
+                GameManager.Instance.AddFish(fishInfo);
+            }
 
             //Destroy Fish and Bobber
             UnityEngine.Object.Destroy(bobber);
@@ -77,7 +80,7 @@ public class PlayerReelingState : PlayerBaseState
             player.SwitchState(player.MovingState);
         }
 
-        //Press the correct button
+        //Press the correct button (Reel fish in closer)
         else if ( ((arrowDirection == 1 && Input.GetKey(KeyCode.LeftArrow)) || (arrowDirection == 2 && Input.GetKey(KeyCode.RightArrow))) && Input.GetKeyDown(KeyCode.Space) && changing == false )
         {
             //Make the bobber take one step towards player
@@ -117,6 +120,7 @@ public class PlayerReelingState : PlayerBaseState
             player.SwitchState(player.MovingState);
         }
 
+        //Neutral state (any direction held will pull in fish)
         else if (changing == true && Input.GetKeyDown(KeyCode.Space))
         {
             //Make the bobber take one step towards player

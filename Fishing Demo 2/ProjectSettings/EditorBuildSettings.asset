@@ -5,7 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/WorldMapScene.unity
+    guid: c998850b84aed974eafec8350cd544c6
+  - enabled: 1
+    path: Assets/Scenes/FreshwaterScene.unity
+    guid: 5563531e521ab6f4995a606384c48948
+  - enabled: 1
+    path: Assets/Scenes/SaltwaterScene.unity
+    guid: 827456d98f4b61049a99f6fa8015acdd
+  - enabled: 1
+    path: Assets/Scenes/FieldGuide.unity
+    guid: 995287f1951ed88459cc653a8953fa07
   m_configObjects: {}
