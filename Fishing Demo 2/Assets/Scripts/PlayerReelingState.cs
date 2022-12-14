@@ -15,7 +15,7 @@ public class PlayerReelingState : PlayerBaseState
     private float chanceToChange = 25.0f; //From 0 (rare) to 100 (frequent)
 
     public float playerStrength = 60.0f;
-    private float fishStrength; //From 0 (weak) to 1 (strong)
+    private float fishStrength; //From 0 (strong) to 1 (weak)
 
     private float landRadius = 1.0f;
 

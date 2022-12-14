@@ -9,8 +9,8 @@ public class PlayerMovingState : PlayerBaseState
 
     public float xMin = -10f;
     public float xMax = 10f;
-    public float yMin = -10f;
-    public float yMax = 10f;
+    public float yMin = -6f;
+    public float yMax = -2f;
 
     public override void EnterState(PlayerStateManager player)
     {

@@ -15,15 +15,31 @@ public class FishSpawner : MonoBehaviour
     private float spawnTime = 5f;
 
     [SerializeField]
-    public FishInfo[] fishInfoArray;
+    private FishInfo[] fishInfoArray;
+
+    [SerializeField]
+    private FishInfo fishA;
+    [SerializeField]
+    private FishInfo fishB;
+    [SerializeField]
+    private FishInfo fishC;
+    [SerializeField]
+    private FishInfo fishD;
+    [SerializeField]
+    private FishInfo fishE;
+
 
     private bool spawning;
 
     void Start()
     {
         spawning = false;
-        fishInfoArray = new FishInfo[3];
-        fishInfoArray[0] = new SalmonInfo();
+        fishInfoArray = new FishInfo[5];
+        fishInfoArray[0] = fishA;
+        fishInfoArray[1] = fishB;
+        fishInfoArray[2] = fishC;
+        fishInfoArray[3] = fishD;
+        fishInfoArray[4] = fishE;
     }
 
     void Update()
@@ -47,13 +63,13 @@ public class FishSpawner : MonoBehaviour
         yield return new WaitForSeconds(spawnTime);
 
         //Find place fish can spawn
-        Vector3 newSpawnPosition = new Vector3(Random.Range(-10f, 10), Random.Range(-2f, 5), 0);
+        Vector3 newSpawnPosition = new Vector3(Random.Range(-10f, 10f), Random.Range(-2f, 5f), 0);
 
         //Spawn new fish
         GameObject Fish = Instantiate(fishPrefab, newSpawnPosition, Quaternion.Euler(0, 0, -90));
 
         //Give new fish its info
-        Fish.GetComponent<FishAI>().fishInfo = fishInfoArray[0];
+        Fish.GetComponent<FishAI>().fishInfo = fishInfoArray[Random.Range(0, 5)];
         Debug.Log(Fish.GetComponent<FishAI>().fishInfo);
 
         //Stop spawning process
